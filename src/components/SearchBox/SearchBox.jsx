@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
-import { getSearchValue } from "../../redux/constants";
+import { selectSearchValue } from "../../redux/constants";
 
 const SearchBox = () => {
-  const searchValue = useSelector(getSearchValue);
+  const searchValue = useSelector(selectSearchValue);
   const dispatchFilter = useDispatch();
 
   const handleChange = (e) => {
